@@ -169,14 +169,48 @@ Below is the screenshot of successful installation of ngspice:
  **Tools Installation**
  
 _STEPS_
-
+Clone the necessary lab files from the given github repository to a directory named VLSI.
 ```
  $ mkdir VLSI
  $ cd VLSI
  $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+ $ cd sky130RTLDesignAndSynthesisWorkshop
+ # To view the verilog files and the lib files, go inside the respective directories
+ $ cd verilog_files
+
+```
+
+<img width="870" alt="Screenshot 2023-08-09 114923" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/878d0336-d7c7-4d3b-ace6-47c3126f5d03">
 
 
+## SKY130RTL D1SK2 L2 Lab 2 Introduction to iVerilog GTKWave - 1
+
+Here, load the sample verilog design good_mux and its associates testbench onto iverilog and run it. \
+
+```
+
+ $ iverilog good_mux.v tb_good_mux.v
+ $ ./a.out
+ # output of simulator will be a vcd file, this vcd file is loaded to gtk wave for waveform visualization.
+ $ gtkwave tb_good_mux.vcd
+
+```
+<img width="722" alt="Screenshot 2023-08-09 115619" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/e4ef3c1d-c6bb-43ee-9ad5-09c77dd2a817">
 
 
+## SKY130RTL D1SK2 L2 Lab 2 Introduction to iVerilog GTKWave - 2
+
+The gtkwave waveforms enable us to verify simulation results with that of our design. 
+
+<img width="732" alt="Screenshot 2023-08-09 115543" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/0775fec5-7d24-4516-99cd-a2c4e4da04f0">
+
+</details>
 
 
+<details>
+ <summary>
+   SKY130RTL D1SK3  - Introduction to Yosys and Logic Synthesis
+ </summary>
+
+ ## Introduction to Logic synthesis and Yosys
+ 
