@@ -1,7 +1,7 @@
 # IIITB ASIC COURSE
 # Table of Contents
 - [Day-0 - Tools Installation](#day-0---tools-installation)
-- [Day-1](#day-1--Introduction-to-Verilog-RTL-Design-and-Synthesis)
+- [Day-1](#day-1--introduction-to-verilog-rtl-design-and-synthesis)
 - [References](#references)
 
 
