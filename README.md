@@ -1,8 +1,9 @@
 # IIITB ASIC COURSE
 # Table of Contents
 - [Day-0 - Tools Installation](#day-0---tools-installation)
-- [Day-1](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
-- [References](#references)
+- [DAY-1-Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
+- [Contributors](#contributors)
+- [Acknowledgements](#acknowledgements)
 
 
 ## DAY-0 - Tools Installation
@@ -160,16 +161,19 @@ Below is the screenshot of successful installation of ngspice:
    SKY130RTL D1SK2 - Labs using iverilog and gtkwave
  </summary>
 
- ## Introduction:
+ ## SKY130RTL D1SK2 L1 Lab 1 Introduction to Labs
 
- **iverilg** : Icarus Verilog is an implementation of the Verilog hardware description language compiler that generates netlists in the desired format. It supports the 1995, 2001 and 2005 versions of the standard, portions of SystemVerilog, and some extensions.
+ **iverilog** : Icarus Verilog is an implementation of the Verilog hardware description language compiler that generates netlists in the desired format. It supports the 1995, 2001 and 2005 versions of the standard, portions of SystemVerilog, and some extensions.
 
  **GTKWAVE**: The GTKWave software is used to view simulation results when running the testbench. It is often used in conjunction with simulation tools like IVERILOG to provide a graphical representation of how signals change over time in a digital design. It gives the result in a graphic format.
 
  **Tools Installation**
  
 _STEPS_
+
+
 Clone the necessary lab files from the given github repository to a directory named VLSI.
+
 ```
  $ mkdir VLSI
  $ cd VLSI
@@ -242,22 +246,29 @@ For the demonstartion, the following mux design is used further:
 
 
 Design:
+
+
 <img width="539" alt="Screenshot 2023-08-09 120454" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/3ff01da5-2609-45ed-8e94-20cbb0c1a143">
 
 Testbench:
 
+
 <img width="418" alt="Screenshot 2023-08-09 120649" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/95ef327a-5e33-4eed-b385-062d86af98d0">
+
+
+
+## SKY130RTL D1SK3 L3 Introduction to logic synthesis - 2
 
 
 **.lib file** : It is a collection of various logic modules. It contains all different kind of logic modules. like AND, OR, NOR etc, required for the synthesis of gates and further netlist file. It contains different variants of the same gate as well, like 2input, 3input, 4input, slow, fast, medium gates etc.
 
 There is a need for all such variants in real life as illustrated below:
-Consider the circuit shown below. So in this circuit for the clock frequency to be maximum so as to make a faster circuit the time period of the clock should be minimum. This will be taken care of parameter T_clk_q_A. Similarly, to ensure that there are no hold issues at fliflop B,Tclk_hold_B we need cells that work slowly. Thus a collection of all such cells forms a .lib file
+Consider the circuit shown below. So in this circuit for the clock frequency to be maximum so as to make a faster circuit the time period of the clock should be minimum. This will be taken care of parameter T_clk_q_A. Similarly, to ensure that there are no hold issues at fliflop B,Tclk_hold_B we need cells that work slowly. 
 
 
 ![259185703-2c9423ee-fea5-4ba2-9089-6254a9bf5b79](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/6fe92335-6b86-4694-a734-77e50f355b20)
 
-The selection of cells will be based on area, power and other such "constraints".
+Thus a collection of all such cells forms a .lib file. The selection of cells will be based on area, power and other such "constraints".
 
 
 
@@ -303,7 +314,7 @@ The synthesized design:
 
 
 
-## SKY130RTL D1SK4 L2 Lab3 Yosys 1 good mux_2
+## SKY130RTL D1SK4 L2 Lab3 Yosys 1 good mux-2
 
 Next step is to generate the netlist file:
 
@@ -318,13 +329,33 @@ Next step is to generate the netlist file:
 <img width="401" alt="Screenshot 2023-08-09 161633" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/00065056-8009-45ca-bc2d-92da4e11558b">
 
 
+## SKY130RTL D1SK4 L3 Lab3 Yosys 1 good mux-3
+
+
 The generated netlist file:
 
 
 <img width="960" alt="Screenshot 2023-08-09 161559" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/97ba009d-d867-4d80-9981-1fd6fb035dd0">
 
 
+As mentioned previously again this netlist file can be given to iverilog along wit testbench to simulate and results must match with that of simulation design.
 
+</details>
+
+## Contributors
+SUSHMA R
+
+
+## Acknowledgements 
+www.vsdiat.com
+
+www.github/kunal123.com
+
+www.google.com
+
+www.chipedge.com/everything-you-need-to-know-about-synthesis-in-vlsi/
+
+www.electronicsforyou.com
 
 
 
