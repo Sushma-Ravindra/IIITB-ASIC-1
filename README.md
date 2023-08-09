@@ -1,9 +1,9 @@
 # IIITB ASIC COURSE
 # Table of Contents
-- [Day-0](#day-0)
+- [Day-0 - Tools Installation](#day-0---tools-installation)
 - [Day-1](#day-1)
 - [References](#references)
-## DAY-0
+## DAY-0 - Tools Installation
 
 <details>
  <summary>
