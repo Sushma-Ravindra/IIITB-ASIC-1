@@ -1,6 +1,7 @@
 # IIITB ASIC COURSE
 # Table of Contents
 - [Day-0 - Tools Installation](#day-0---tools-installation)
+   - [Yosys Installation](#yosys-installation)
 - [Day-1](#day-1)
 - [References](#references)
 ## DAY-0 - Tools Installation
