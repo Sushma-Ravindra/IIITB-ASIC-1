@@ -155,6 +155,26 @@ Below is the screenshot of successful installation of ngspice:
 </details>
 
 
+<details>
+ <summary>
+   SKY130RTL D1SK2 - Labs using iverilog and gtkwave
+ </summary>
+
+ ## Introduction:
+
+ **iverilg** : Icarus Verilog is an implementation of the Verilog hardware description language compiler that generates netlists in the desired format. It supports the 1995, 2001 and 2005 versions of the standard, portions of SystemVerilog, and some extensions.
+
+ **GTKWAVE**: The GTKWave software is used to view simulation results when running the testbench. It is often used in conjunction with simulation tools like IVERILOG to provide a graphical representation of how signals change over time in a digital design. It gives the result in a graphic format.
+
+ **Tools Installation**
+ 
+_STEPS_
+
+```
+ $ mkdir VLSI
+ $ cd VLSI
+ $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+
 
 
 
