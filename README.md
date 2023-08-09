@@ -214,3 +214,41 @@ The gtkwave waveforms enable us to verify simulation results with that of our de
 
  ## Introduction to Logic synthesis and Yosys
  
+
+***Yosys*** Yosys aims to converting high-level hardware descriptions into optimized gate-level representations that can be targeted for various FPGA and ASIC technologies. The flow for yosys is we feed the yosys with the design which is in RTL level and the .lib file which contain standard library cells then the yosys synthesizes and gives us the netlist file. 
+
+Yosys uses its lib file which contains all the necessary cells and the design by the user to generate a netlist.
+
+![yosysflow](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/281fab56-5b8b-4195-ada4-2cd3bb00bbfa)
+
+Then,post synthesis to check whether the netlist obtained is valid or not, try matching the waveforms before and after synthesis. The same testbench that is used for the simulation can be used for the synthesized netlist as well. The netlist and testbench is fed back into iverilog to confirm synthesis results
+
+
+
+
+## SKY130RTL D1SK3 L2 Introduction to logic synthesis - 1
+
+ **Logic Synthesis** Synthesis converts a basic RTL design into a gate-level netlist that includes all of the designer’s limitations. Synthesis is carried out in several stages:
+
+1.Converting RTL to basic logic gates.
+
+2.Mapping those gates to actual technology-dependent logic gates accessible in technology libraries.
+
+3.Optimising the translated netlist while maintaining the designer’s limitations.
+
+The netlist is supposed to perform the same function as the corresponding HDL code. Synthesizer is the tool which convert RTL design into the netlist form. One of such tool used here is Yosys.
+
+**.lib file** : It is a collection of various logic modules. It contains all different kind of logic modules. like AND, OR, NOR etc, required for the synthesis of gates and further netlist file. It contains different variants of the same gate as well, like 2input, 3input, 4input, slow, fast, medium gates etc.
+There is a need for all such variants in real life as illustrated below:
+
+
+
+
+
+
+_Steps to invoke Yosys_
+
+```
+
+
+ 
