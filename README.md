@@ -1,8 +1,10 @@
 # IIITB ASIC COURSE
 # Table of Contents
 - [Day-0 - Tools Installation](#day-0---tools-installation)
-- [Day-1](#day-1)
+- [Day-1](#day-1--Introduction-to-Verilog-RTL-Design-and-Synthesis)
 - [References](#references)
+
+
 ## DAY-0 - Tools Installation
 
 <details>
@@ -129,6 +131,11 @@ Below is the screenshot of successful installation of ngspice:
 
 </details>
 
+## DAY-1-Introduction to Verilog RTL Design and Synthesis
+<details>
+ <summary>
+  SKY130RTL D1SK1 - Introduction to open-source simulator iverilog
+ </summary>
 
 
 
