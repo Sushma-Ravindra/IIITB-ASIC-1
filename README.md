@@ -238,6 +238,17 @@ Then,post synthesis to check whether the netlist obtained is valid or not, try m
 
 The netlist is supposed to perform the same function as the corresponding HDL code. Synthesizer is the tool which convert RTL design into the netlist form. One of such tool used here is Yosys.
 
+For the demonstartion, the following mux design is used further:
+
+
+Design:
+<img width="539" alt="Screenshot 2023-08-09 120454" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/3ff01da5-2609-45ed-8e94-20cbb0c1a143">
+
+Testbench:
+
+<img width="418" alt="Screenshot 2023-08-09 120649" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/95ef327a-5e33-4eed-b385-062d86af98d0">
+
+
 **.lib file** : It is a collection of various logic modules. It contains all different kind of logic modules. like AND, OR, NOR etc, required for the synthesis of gates and further netlist file. It contains different variants of the same gate as well, like 2input, 3input, 4input, slow, fast, medium gates etc.
 
 There is a need for all such variants in real life as illustrated below:
@@ -248,6 +259,8 @@ Consider the circuit shown below. So in this circuit for the clock frequency to 
 
 The selection of cells will be based on area, power and other such "constraints".
 
+
+
 </details>
 
 
@@ -257,12 +270,61 @@ The selection of cells will be based on area, power and other such "constraints"
  </summary>
 
 
-## SKY130RTL D1SK4 L1 lab3 Yosys 1 good mux
+## SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux-1
 
 
 _Steps to invoke Yosys_
 
 ```
+ $ yosys
+ $ read_liberty -lib /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ $ read_verilog good_mux.v
+ $ synth -top good_mux
+ $ abc -liberty /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ $ show
 
+```
 
+Reading .lib and mux files and synthesis command:
+
+<img width="960" alt="Screenshot 2023-08-09 160445" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/56ee4399-7006-4dcb-a55e-35d4a0ef0114">
+
+Generating netlist:
+
+<img width="804" alt="Screenshot 2023-08-09 160821" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/a4d8eda5-7e35-458b-b60a-f19bce8f1e8a">
+
+ Output of netlist generation and show command to display:
  
+<img width="949" alt="Screenshot 2023-08-09 160903" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/8cf9e96b-a132-4f70-a706-2ed87de23ae7">
+
+The synthesized design:
+
+<img width="461" alt="Screenshot 2023-08-09 160934" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/02788215-e0ea-4f82-8cb6-d6093ecb7097">
+
+
+
+## SKY130RTL D1SK4 L2 Lab3 Yosys 1 good mux_2
+
+Next step is to generate the netlist file:
+
+```
+ $ write_verilog good_mux_netlist.v
+ # The above command can be used to generate a netlist file. But to generate the same in a consice and readble format use the command below
+ $ write_verilog -noattr good_mux_netlist.v
+ $ !gvim good_mux_netlist.v
+
+```
+
+<img width="401" alt="Screenshot 2023-08-09 161633" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/00065056-8009-45ca-bc2d-92da4e11558b">
+
+
+The generated netlist file:
+
+
+<img width="960" alt="Screenshot 2023-08-09 161559" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/97ba009d-d867-4d80-9981-1fd6fb035dd0">
+
+
+
+
+
+
