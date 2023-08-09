@@ -1,7 +1,8 @@
 # IIITB ASIC COURSE
 # Table of Contents
 - [Day-0](#day-0)
-- [Day-1](#day-0)
+- [Day-1](#day-1)
+- [References](#references)
 ## DAY-0
 
 <details>
