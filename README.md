@@ -64,7 +64,7 @@ Below is the screenshot of successful installation of gtkwave:
 <br>
 
 <details>
-<summary> DAY-0 </summary>
+<summary> DAY-1 </summary>
 <br>
 
 <details>
