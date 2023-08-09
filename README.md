@@ -45,8 +45,6 @@ Below is the screenshot of sucessful installation of iverilog:
 
 
 <img width="960" alt="Screenshot 2023-08-01 160329" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/a694d8c0-47f6-4d3b-ab23-93de8c2f4340">
-</details>
-
 <details>
  <summary>
 GTKWAVE Installation
@@ -68,9 +66,12 @@ Below is the screenshot of successful installation of gtkwave:
 
 
 <details>
-<summary>DAY-1/summary>
-<details>
- 
+<summary>
+ Day-1
+</summary>
+
+
+ <details>
  <summary>
 Open STA Installation
  </summary>
@@ -88,7 +89,7 @@ $ make
 $ sudo make install  
 ```
 Below is the screenshot of successful installation of Open STA:
-
+</details>
 <details>
  <summary>
 MAGIC Installation
@@ -111,7 +112,7 @@ make
 sudo make install
 ```
 Below is the screenshot of successful installation of MAGIC:
-
+</details>
 <details>
  <summary>
 NGSPICE Installation
@@ -131,8 +132,8 @@ sudo make install
 
 Below is the screenshot of successful installation of ngspice:
 
-
-
+</details>
+</details>
 
 
 
