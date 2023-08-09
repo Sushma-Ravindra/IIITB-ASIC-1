@@ -1,10 +1,8 @@
 # IIITB ASIC COURSE
-
-<details>
-<summary> DAY-0 </summary>
-<br>
-
-
+# Table of Contents
+- [Day-0](#day-0)
+- [Day-1](#day-0)
+## DAY-0
 
 <details>
  <summary>
@@ -45,6 +43,7 @@ Below is the screenshot of sucessful installation of iverilog:
 
 
 <img width="960" alt="Screenshot 2023-08-01 160329" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/a694d8c0-47f6-4d3b-ab23-93de8c2f4340">
+</details>
 <details>
  <summary>
 GTKWAVE Installation
@@ -58,45 +57,37 @@ $ sudo apt install gtkwave
 ```
 Below is the screenshot of successful installation of gtkwave:
 <img width="960" alt="Screenshot 2023-08-01 161021" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/0e382340-4e0e-410a-86b5-7c883846c9b3">
-
-
-
 </details>
-
-
-
 <details>
-<summary>
- Day-1
-</summary>
-
-
- <details>
  <summary>
-Open STA Installation
- </summary>
-```
-# Dependencies for OpenSTA
-sudo apt-get install cmake clang gcc tcl swig bison flex 
+  Open STA
+ </summary> 
+ 
+ **Commands to install OpenSTA**
+ ```
+ Dependencies for OpenSTA  
+ sudo apt-get install cmake clang gcc tcl swig bison flex
 
-# Commands to Install OpenSTA 
-$ git clone https://github.com/The-OpenROAD-Project/OpenSTA.git
-$ cd OpenSTA
-$ mkdir build
-$ cd build
-$ cmake ..
-$ make
-$ sudo make install  
-```
+ # Commands to Install OpenSTA
+ $ git clone https://github.com/The-OpenROAD-Project/OpenSTA.git
+ $ cd OpenSTA
+ $ mkdir build
+ $ cd build
+ $ cmake ..
+ $ make
+ $ sudo make install
+```  
 Below is the screenshot of successful installation of Open STA:
 </details>
+
 <details>
  <summary>
-MAGIC Installation
+  MAGIC Installation
  </summary>
-# Commands to Install MAGIC
+ 
+**Commands to Install MAGIC**
+ 
 ```
-
 $   sudo apt-get install m4
 $   sudo apt-get install tcsh
 $   sudo apt-get install csh
@@ -115,25 +106,31 @@ Below is the screenshot of successful installation of MAGIC:
 </details>
 <details>
  <summary>
-NGSPICE Installation
+  NGSPICE Installation
  </summary>
-# Commands to Install NGSPICE
-Download the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory and then unpack it using:
+ 
+**Commands to Install NGSPICE**
+
+```
+ Download the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory and then unpack it using:
+ tar -zxvf ngspice-40.tar.gz
+
+ $cd ngspice-40
+ $mkdir release
+ $cd release
+ $../configure  --with-x --with-readline=yes --disable-debug
+ $make
+ $sudo make install
 ```
 
-tar -zxvf ngspice-40.tar.gz
-cd ngspice-40
-mkdir release
-cd release
-../configure  --with-x --with-readline=yes --disable-debug
-make
-sudo make install
-```
 
 Below is the screenshot of successful installation of ngspice:
 
 </details>
-</details>
+
+
+
+
 
 
 
