@@ -62,3 +62,75 @@ Below is the screenshot of successful installation of gtkwave:
 <img width="960" alt="Screenshot 2023-08-01 161021" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/0e382340-4e0e-410a-86b5-7c883846c9b3">
 
 <br>
+
+<details>
+<summary> DAY-0 </summary>
+<br>
+
+<details>
+ <summary>
+Open STA Installation
+ </summary>
+```
+# Dependencies for OpenSTA
+sudo apt-get install cmake clang gcc tcl swig bison flex 
+
+# Commands to Install OpenSTA 
+$ git clone https://github.com/The-OpenROAD-Project/OpenSTA.git
+$ cd OpenSTA
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+$ sudo make install  
+```
+Below is the screenshot of successful installation of Open STA:
+
+<details>
+ <summary>
+MAGIC Installation
+ </summary>
+# Commands to Install MAGIC
+```
+
+$   sudo apt-get install m4
+$   sudo apt-get install tcsh
+$   sudo apt-get install csh
+$   sudo apt-get install libx11-dev
+$   sudo apt-get install tcl-dev tk-dev
+$   sudo apt-get install libcairo2-dev
+$   sudo apt-get install mesa-common-dev libglu1-mesa-dev
+$   sudo apt-get install libncurses-dev
+git clone https://github.com/RTimothyEdwards/magic
+cd magic
+./configure
+make
+sudo make install
+```
+Below is the screenshot of successful installation of MAGIC:
+
+<details>
+ <summary>
+NGSPICE Installation
+ </summary>
+# Commands to Install NGSPICE
+Download the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory and then unpack it using:
+```
+
+tar -zxvf ngspice-40.tar.gz
+cd ngspice-40
+mkdir release
+cd release
+../configure  --with-x --with-readline=yes --disable-debug
+make
+sudo make install
+```
+
+Below is the screenshot of successful installation of ngspice:
+
+
+
+
+
+
+
