@@ -28,7 +28,8 @@ $ make
 $ sudo make install
 ```
 Below the screenshot of successful installation of Yosys:
-<img width="960" alt="Screenshot 2023-08-01 164434" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/c0dcceb9-6e75-4a9a-81b7-2b88903d5273">
+<img width="685" alt="yosys" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/f7cd6406-65d2-4b58-888e-b20cc8af191c">
+
 </details>
 
 <details>
@@ -45,8 +46,9 @@ $ sudo apt-get install iverilog
 
 Below is the screenshot of sucessful installation of iverilog:
 
+<img width="580" alt="iverilog" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/bc6eff91-48d0-491e-a172-fbb95aa6859a">
 
-<img width="960" alt="Screenshot 2023-08-01 160329" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/a694d8c0-47f6-4d3b-ab23-93de8c2f4340">
+
 </details>
 <details>
  <summary>
@@ -60,14 +62,15 @@ $ sudo apt update
 $ sudo apt install gtkwave
 ```
 Below is the screenshot of successful installation of gtkwave:
-<img width="960" alt="Screenshot 2023-08-01 161021" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/0e382340-4e0e-410a-86b5-7c883846c9b3">
+<img width="959" alt="gtkwave" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/6d3a756d-9ed8-4984-8479-63a09ee6a815">
+
 </details>
 <details>
  <summary>
   Open STA
  </summary> 
  
- **Commands to install OpenSTA**
+ _Steps to install OpenSTA_
  ```
  Dependencies for OpenSTA  
  sudo apt-get install cmake clang gcc tcl swig bison flex
@@ -82,6 +85,8 @@ Below is the screenshot of successful installation of gtkwave:
  $ sudo make install
 ```  
 Below is the screenshot of successful installation of Open STA:
+<img width="600" alt="opensta" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/aa234289-e2d1-4f7e-8c45-778ecca88dc4">
+
 </details>
 
 <details>
@@ -89,7 +94,7 @@ Below is the screenshot of successful installation of Open STA:
   MAGIC Installation
  </summary>
  
-**Commands to Install MAGIC**
+_Steps to Install MAGIC_
  
 ```
 $   sudo apt-get install m4
@@ -107,13 +112,16 @@ make
 sudo make install
 ```
 Below is the screenshot of successful installation of MAGIC:
+<img width="960" alt="magic" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/c8496320-dcef-410e-a4a0-3a81ea30ef67">
+
+
 </details>
 <details>
  <summary>
   NGSPICE Installation
  </summary>
  
-**Commands to Install NGSPICE**
+_Steps to Install NGSPICE_
 
 ```
  Download the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory and then unpack it using:
@@ -129,6 +137,7 @@ Below is the screenshot of successful installation of MAGIC:
 
 
 Below is the screenshot of successful installation of ngspice:
+<img width="595" alt="ngspice" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/ea0ba9a9-8502-4b9b-8b00-208a3b012771">
 
 </details>
 
@@ -138,7 +147,7 @@ Below is the screenshot of successful installation of ngspice:
   SKY130RTL D1SK1 - Introduction to open-source simulator iverilog
  </summary>
 
-### Introduction
+### Introduction to open source simulator
 
 ***RTL DESIGN*** : It involves the specification of a digital circuit in terms of the flow of digital signals between hardware registers, and the logical operations performed on those signals. It is basically the implementation of specifications. RTL design lies between high-level behavioral design and low-level gate-level design. It captures the functionality of the circuit at a level where data transfers between registers are the main focus, while ignoring the specific implementation details of gates and transistors. In general,the RTL designs are described using HDLs like Verilog or VHDL. 
 
