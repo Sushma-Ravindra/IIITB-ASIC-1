@@ -212,7 +212,7 @@ The gtkwave waveforms enable us to verify simulation results with that of our de
    SKY130RTL D1SK3  - Introduction to Yosys and Logic Synthesis
  </summary>
 
- ## Introduction to Logic synthesis and Yosys
+ ## SKY130RTL D1SK3 L1 Introduction to Logic synthesis and Yosys
  
 
 ***Yosys*** Yosys aims to converting high-level hardware descriptions into optimized gate-level representations that can be targeted for various FPGA and ASIC technologies. The flow for yosys is we feed the yosys with the design which is in RTL level and the .lib file which contain standard library cells then the yosys synthesizes and gives us the netlist file. 
@@ -239,11 +239,25 @@ Then,post synthesis to check whether the netlist obtained is valid or not, try m
 The netlist is supposed to perform the same function as the corresponding HDL code. Synthesizer is the tool which convert RTL design into the netlist form. One of such tool used here is Yosys.
 
 **.lib file** : It is a collection of various logic modules. It contains all different kind of logic modules. like AND, OR, NOR etc, required for the synthesis of gates and further netlist file. It contains different variants of the same gate as well, like 2input, 3input, 4input, slow, fast, medium gates etc.
+
 There is a need for all such variants in real life as illustrated below:
+Consider the circuit shown below. So in this circuit for the clock frequency to be maximum so as to make a faster circuit the time period of the clock should be minimum. This will be taken care of parameter T_clk_q_A. Similarly, to ensure that there are no hold issues at fliflop B,Tclk_hold_B we need cells that work slowly. Thus a collection of all such cells forms a .lib file
 
 
+![259185703-2c9423ee-fea5-4ba2-9089-6254a9bf5b79](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/6fe92335-6b86-4694-a734-77e50f355b20)
+
+The selection of cells will be based on area, power and other such "constraints".
+
+</details>
 
 
+<details>
+ <summary>
+   SKY130RTL D1SK4 - Labs using Yosys and Sky130 PDKs
+ </summary>
+
+
+## SKY130RTL D1SK4 L1 lab3 Yosys 1 good mux
 
 
 _Steps to invoke Yosys_
