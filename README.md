@@ -61,13 +61,16 @@ $ sudo apt install gtkwave
 Below is the screenshot of successful installation of gtkwave:
 <img width="960" alt="Screenshot 2023-08-01 161021" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/0e382340-4e0e-410a-86b5-7c883846c9b3">
 
-<br>
+
+
+</details>
+
+
 
 <details>
-<summary> DAY-1 </summary>
-<br>
-
+<summary>DAY-1/summary>
 <details>
+ 
  <summary>
 Open STA Installation
  </summary>
