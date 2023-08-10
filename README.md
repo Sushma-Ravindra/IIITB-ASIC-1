@@ -503,6 +503,13 @@ We need flip flops for combinational circuits as well because propagation delays
 
 ## SKY130RTL D2SK3 - L2 - Why flops and Flop coding styles-2
 
+Verilog codes of synchronous and asynchronous reset for D flip flops are discussed.
+
+
+
+## SKY130RTL D2SK3 - L3 - Lab flop synthesis simulations-1
+
+
 
 
 
