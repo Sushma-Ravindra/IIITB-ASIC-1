@@ -354,7 +354,7 @@ As mentioned previously again this netlist file can be given to iverilog along w
 
 
 
-DAY-2-Timing Libs, Hierarchical vs flat synthesis and efficient flop coding styles
+## DAY-2-Timing Libs, Hierarchical vs flat synthesis and efficient flop coding styles
 
 
 <details>
@@ -364,7 +364,7 @@ DAY-2-Timing Libs, Hierarchical vs flat synthesis and efficient flop coding styl
  </summary>
 
 
-## SKY130RTL D2SK1 - L1 - Imtroduction to .lib -1
+## SKY130RTL D2SK1 - L1 - Introduction to .lib -1
 
 The .lib file is opened in vim to understand its contents in depth. 
 TITLE : Explanding the title of the lib file: 30nm tech, typical out of fast,slow and medium at 25 degree celsius of temperature. Thus the title explains "process", "voltage" and "temperature". These create variations in the design.
@@ -378,7 +378,7 @@ TITLE : Explanding the title of the lib file: 30nm tech, typical out of fast,slo
 
 
 
-## SKY130RTL D2SK1 - L2 - Imtroduction to .lib -2
+## SKY130RTL D2SK1 - L2 - Introduction to .lib -2
 
 Futhermore, it tells about the technology(here,cmos) , delay models(LUTs), units(nsecs,Volts,nW,mA,kohms for the respective parameters), operating conditions(P,V,T).
 
@@ -396,13 +396,14 @@ Moving on, the standard cells, specified by the keyword "cell" are visible. Gate
 Each cell consists of details such as leakage power, number of inputs and function performed on the inputs and so on. The verilog model of each of these gates can be found by specifying the name of the cell along with the path of the verilog files. 
 Also, we can find out power and timing information of each of the input.
 
+The verilog file of the corresponding standard cell can be found in the verilog_model under the my_lib file. It can be accessed with the command shown in the image below:
 
 <img width="810" alt="Screenshot 2023-08-10 173352" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/7ea6b692-25d4-4cde-9b20-dfaf2907ff71">
 
 
 
 
-## SKY130RTL D2SK1 - L3 - Imtroduction to .lib-3
+## SKY130RTL D2SK1 - L3 - Introduction to .lib-3
 
 Elaborating the same with the use of a 2 input and gate. On comparing different types of and gate cells: wider cells consume more power and less delay as mentioned earlier.
 
