@@ -547,9 +547,13 @@ Follow similar commands to sythesize all the variations of reset and set.
 
 ## SKY130RTL D2SK3 - L5- Interesting Optimizations-1
 
+Through multiper circuits, it is obsereved that there is no use of memory in the design and hence is optimized.
 
 
 
+## SKY130RTL D2SK3 - L6- Interesting Optimizations-2
+
+Similarly, optimization of multiplication of a 3-bit and a 6-bit number is done, without the use of any standard cells.
 
 
 
