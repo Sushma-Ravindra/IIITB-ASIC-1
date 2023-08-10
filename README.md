@@ -498,7 +498,10 @@ $synth -top module_name.v
 
 ## SKY130RTL D2SK3 - L1 - Why flops and Flop coding styles-1
 
+We need flip flops for combinational circuits as well because propagation delays of the gates may cause glitch; flip flops (D) restrict glitches beacause the output changes only at clock edge. Thus the output will be stable even if input is glitching i.e output shielded from input glitch. To control the data into and out of FF, there are reset(sync and async) and set.
 
+
+## SKY130RTL D2SK3 - L2 - Why flops and Flop coding styles-2
 
 
 
