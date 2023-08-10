@@ -477,6 +477,34 @@ Similarly following commands for flatten, there is no longer a hierarchial insta
 
 
 
+Further, on following the above commands to synthesize only the first sub module, we obtain the netlist as follows:
+
+<img width="305" alt="Screenshot 2023-08-10 212516" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/da3ef19e-00c2-4cae-8486-22e2a7b8c2b8">
+
+
+This is useful so as to not synthesize multiple instantiations of the same function, but synthesize once and replicate n times. In large designs the netlists are split to ensure optimal synthesis and the all are integrated together.
+$synth -top module_name.v
+
+</details>
+
+
+<details>
+
+<summary>
+   SKY130RTL D2SK3 - Various Flop Coding Styles and optimization
+ </summary>
+
+
+## SKY130RTL D2SK3 - L1 - Why flops and Flop coding styles-1
+
+
+
+
+
+
+
+
+
 
 
 
