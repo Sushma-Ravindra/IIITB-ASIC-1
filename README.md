@@ -442,6 +442,7 @@ Execute the following commands:
  $ yosys
  $ read_liberty -lib /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
  $ read_verilog multiple_modules.v
+ $ synth -top multiple_modules 
  $ abc -liberty /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
  $ show
  # throws an error
@@ -519,6 +520,35 @@ Simulating the verilog codes of async and sync set and reset and checking their 
 
 
 ## SKY130RTL D2SK3 - L4 - Lab flop synthesis simulations-2
+
+To synthesize the file, run the following commands in yosys:
+
+```
+
+  $ yosys
+  $ read_liberty -lib /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ read_verilog dff_asyncres.v
+  $ synth -top dff_asynres
+  $ dfflibmap -liberty /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  #The above keyword dfflibmap is to read flipflop from .lib file
+  $ abc -liberty /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  $ show
+
+
+```
+
+
+<img width="635" alt="Screenshot 2023-08-10 233244" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/743d539a-c240-4b98-8539-0527717af975">
+
+
+Follow similar commands to sythesize all the variations of reset and set.
+
+
+
+## SKY130RTL D2SK3 - L5- Interesting Optimizations-1
+
+
+
 
 
 
