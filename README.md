@@ -351,6 +351,73 @@ As mentioned previously again this netlist file can be given to iverilog along w
 
 </details>
 
+
+
+
+DAY-2-Timing Libs, Hierarchical vs flat synthesis and efficient flop coding styles
+
+
+<details>
+
+<summary>
+   SKY130RTL D2SK1 - Introduction to timing.libs
+ </summary>
+
+
+## SKY130RTL D2SK1 - L1 - Imtroduction to .lib -1
+
+The .lib file is opened in vim to understand its contents in depth. 
+TITLE : Explanding the title of the lib file: 30nm tech, typical out of fast,slow and medium at 25 degree celsius of temperature. Thus the title explains "process", "voltage" and "temperature". These create variations in the design.
+
+
+<img width="503" alt="Screenshot 2023-08-10 172234" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/d8684758-584c-4c21-9842-e7dd78a2407c">
+
+
+<img width="504" alt="Screenshot 2023-08-10 172546" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/0efe6f92-c363-49da-8394-a073b3994f5e">
+
+
+
+
+## SKY130RTL D2SK1 - L2 - Imtroduction to .lib -2
+
+Futhermore, it tells about the technology(here,cmos) , delay models(LUTs), units(nsecs,Volts,nW,mA,kohms for the respective parameters), operating conditions(P,V,T).
+
+
+<img width="346" alt="Screenshot 2023-08-10 172640" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/bc138827-d07c-4712-95a8-a7fe442521b7">
+
+
+
+Moving on, the standard cells, specified by the keyword "cell" are visible. Gates are present as standard cells.
+
+
+<img width="386" alt="Screenshot 2023-08-10 172725" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/835c2f6a-ba4b-45ab-b218-9b8d112c4bc2">
+
+
+Each cell consists of details such as leakage power, number of inputs and function performed on the inputs and so on. The verilog model of each of these gates can be found by specifying the name of the cell along with the path of the verilog files. 
+Also, we can find out power and timing information of each of the input.
+
+
+<img width="810" alt="Screenshot 2023-08-10 173352" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/7ea6b692-25d4-4cde-9b20-dfaf2907ff71">
+
+
+
+
+## SKY130RTL D2SK1 - L3 - Imtroduction to .lib-3
+
+Elaborating the same with the use of a 2 input and gate. On comparing different types of and gate cells: wider cells consume more power and less delay as mentioned earlier.
+
+
+<img width="357" alt="Screenshot 2023-08-10 182820" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/af86d53b-6cb1-4b3f-9be1-b285dbefdf2e">
+
+
+
+
+<img width="532" alt="Screenshot 2023-08-10 182737" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/cbd7c0a2-0b71-4b53-a03a-007b9dece648">
+
+
+
+</details>
+
 ## Contributors
 SUSHMA R
 
