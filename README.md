@@ -419,6 +419,40 @@ Elaborating the same with the use of a 2 input and gate. On comparing different 
 
 </details>
 
+<details>
+
+<summary>
+   SKY130RTL D2SK2 - Hierarchical versus Flat synthesis
+ </summary>
+
+
+## SKY130RTL D2SK12 - L1 - Hierarchical and Flat Synthesis - 1
+
+First enter into the path where verilog_files are located and enter into the mutiple_modules file in the editor.
+
+
+<img width="646" alt="Screenshot 2023-08-10 195302" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/05f300b6-14c4-460a-ae31-77752359a8f6">
+
+
+Execute the following commands:
+
+```
+ $ yosys
+ $ read_liberty -lib /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ $ read_verilog multiple_modules.v
+ $ 
+
+
+
+
+
+
+
+
+
+
+
+
 ## Contributors
 SUSHMA R
 
