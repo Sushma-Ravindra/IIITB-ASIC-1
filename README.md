@@ -437,14 +437,42 @@ First enter into the path where verilog_files are located and enter into the mut
 Execute the following commands:
 
 ```
+ 
  $ yosys
  $ read_liberty -lib /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
  $ read_verilog multiple_modules.v
- $ 
+ $ abc -liberty /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ $ show
+ # throws an error
+ $ show multiple_modules
+ # displays on dot viewer
+ $ write_verilog -noattr multiple_modules_hier.v
+ $ !vim multiple_modules_hier.v
+ $ flatten
+ # to not have multiple models hierarchically
+ $ write_verilog -noattr multiple_modules_flat.v
+ $ !vim multiple_modules_flat.v
+
+
+```
+
+In heirarchial, it is observed that the implemetation is done through nand gates, while design did not have a nand gate implementation. This is done because in Cmos implementation or stacking PMOS for generating OR gate which is a bad idea as PMOS mobility is low and wider cells are required; whereas NMOS stacking doesnt create these problems and can generate NAND logic, hence it is preffered by the synthesis tool. 
+
+
+<img width="302" alt="Screenshot 2023-08-10 201000" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/e6602bcb-184f-411a-8216-e3f4ef3049b0">
 
 
 
+## SKY130RTL D2SK12 - L2 - Hierarchical and Flat Synthesis - 2
 
+Similarly following commands for flatten, there is no longer a hierarchial instantiation.
+
+
+![WhatsApp Image 2023-08-10 at 21 19 18 (1)](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/a30541df-e922-4923-8773-d3c42af72e35)
+
+<img width="417" alt="Screenshot 2023-08-10 205354" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/e03f98a4-f22e-4240-908d-f05d5d6a28f0">
+
+<img width="460" alt="Screenshot 2023-08-10 211305" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/d861bae5-e254-4c35-bd04-d2fe18bce1a0">
 
 
 
