@@ -2,6 +2,7 @@
 # Table of Contents
 - [Day-0 - Tools Installation](#day-0---tools-installation)
 - [DAY-1-Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
+- [DAY-2-Timing Libs Hierarchical vs flat synthesis and efficient flop coding styles](#day-2-timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
 - [Contributors](#contributors)
 - [Acknowledgements](#acknowledgements)
 
@@ -354,7 +355,7 @@ As mentioned previously again this netlist file can be given to iverilog along w
 
 
 
-## DAY-2-Timing Libs, Hierarchical vs flat synthesis and efficient flop coding styles
+## DAY-2-Timing Libs Hierarchical vs flat synthesis and efficient flop coding styles
 
 
 <details>
