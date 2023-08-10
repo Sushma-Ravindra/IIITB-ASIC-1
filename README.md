@@ -509,11 +509,16 @@ Verilog codes of synchronous and asynchronous reset for D flip flops are discuss
 
 ## SKY130RTL D2SK3 - L3 - Lab flop synthesis simulations-1
 
+Simulating the verilog codes of async and sync set and reset and checking their outputs and verifying the same.
+
+
+<img width="960" alt="Screenshot 2023-08-10 231636" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/384c629f-d93f-4005-82f5-a78fc13f0172">
+
+<img width="782" alt="Screenshot 2023-08-10 232433" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/cf936de4-3eba-4a54-9a36-12cf4a73401d">
 
 
 
-
-
+## SKY130RTL D2SK3 - L4 - Lab flop synthesis simulations-2
 
 
 
