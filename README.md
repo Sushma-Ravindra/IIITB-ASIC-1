@@ -503,7 +503,8 @@ Execute the following commands:
  $ yosys
  $ read_liberty -lib /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
  $ read_verilog multiple_modules.v
- $ synth -top multiple_modules 
+ $ synth -top multiple_modules
+ # title of the module is given in the synth command
  $ abc -liberty /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
  $ show
  # throws an error
@@ -836,6 +837,33 @@ dff_const5: 2 flipflops are present, but no flip flop can be optimized, hence bo
 </details>
 
 
+
+<details>
+ <summary>
+SKY130RTL D3SK4 - Sequential Logic Optimizations for unused outputs
+ </summary>
+
+
+ ## SKY130RTL D3SK4 L1 Sequential Optimizations unused outputs-1 
+
+ Looking into the 3 bit upcounter design, counter_opt.v. The output of the counter that is viewed is count[0], which is only 1 bit in the 3 bit counter output, hence the synthesis tool generates only 1 flip flop. 
+ 
+
+<img width="289" alt="Screenshot 2023-08-13 174040" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/87cf84be-c943-4d36-b87b-96b002fe5956">
+
+
+<img width="1383" alt="Screenshot 2023-08-13 at 5 43 52 PM" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/7b1e943b-2a4a-44c3-be78-6fef8e32b589">
+
+
+
+ ## SKY130RTL D3SK4 L1 Sequential Optimizations unused outputs-2
+
+ Looking into the 3 bit upcounter design, counter_opt2.v. The output of the counter that is viewed is count[2:0],all 3 bits counter output, hence the synthesis tool generates all 3 flip flop. Also, since there is a lot of combinational logic being generated here, it is worthy to observe that in the previous example, they didnt exist only because the other 2 flipflops were not needed and hence all the combinational logic feeding their inputs were also optimized. 
+
+
+ ![WhatsApp Image 2023-08-13 at 17 56 49](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/cbd50477-f07e-4382-a1cf-79e674d2ca71)
+
+</details>
 
 
 
