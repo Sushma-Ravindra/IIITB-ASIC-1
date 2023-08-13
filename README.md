@@ -5,7 +5,7 @@
 - [DAY-2-Timing Libs Hierarchical vs flat synthesis and efficient flop coding styles](#day-2-timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
 - [DAY-3 - Combinational and Sequential Optimizations](#day-3---combinational-and-sequential-optimizations)
 - [DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation mismatch](#day-4---gls,-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
-- [DAY-5 -If,case,for loop and generate](#day-5--if,case,for-loop-and-generate)
+- [DAY-5 - If,case,for loop and generate](#day-5--if,case,for-loop-and-generate)
 - [Contributors](#contributors)
 - [Acknowledgements](#acknowledgements)
 
