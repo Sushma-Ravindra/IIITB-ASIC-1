@@ -135,11 +135,71 @@ _Steps to Install NGSPICE_
  $make
  $sudo make install
 ```
-
+ 
 
 Below is the screenshot of successful installation of ngspice:
 <img width="595" alt="ngspice" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/ea0ba9a9-8502-4b9b-8b00-208a3b012771">
 
+
+</details>
+<details>
+ <summary>
+  OpenLane
+ </summary>
+
+
+_Steps to Install OpenLane_
+
+```
+
+ $ sudo apt-get update
+ $ sudo apt-get upgrade
+ $ sudo apt install -y build-essential python3 python3-venv python3-pip make git
+
+ $ sudo apt install apt-transport-https ca-certificates curl software-properties-common
+ $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+ $ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu (lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+ $ sudo apt update
+
+ $ sudo apt install docker-ce docker-ce-cli containerd.io
+
+ $ sudo docker run hello-world
+
+ $ sudo groupadd docker
+ $ sudo usermod -aG docker $USER
+ $ sudo reboot 
+
+ # After reboot
+ $ docker run hello-world
+
+ # Check dependencies 
+   git --version
+   docker --version
+   python3 --version
+   python3 -m pip --version
+   make --version
+   python3 -m venv -h
+
+ # Below steps installs PDKs and Tools
+  $ cd $HOME
+  $ git clone https://github.com/The-OpenROAD-Project/OpenLane
+  $ cd OpenLane
+  $ make
+  $ make test
+
+```
+
+<img width="789" alt="Screenshot 2023-08-13 121625" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/ba348b32-c8e6-4ec5-b079-3252dbfeac13">
+
+
+<img width="573" alt="Screenshot 2023-08-13 121801" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/6f0b1e69-d619-4bf9-bd80-d69fd832dbca">
+
+
+<img width="936" alt="Screenshot 2023-08-13 121901" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/5edac02a-c470-452a-a7f4-a1c20f712cf2">
+
+ 
 </details>
 
 ## DAY-1-Introduction to Verilog RTL Design and Synthesis
