@@ -4,7 +4,7 @@
 - [DAY-1-Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
 - [DAY-2-Timing Libs Hierarchical vs flat synthesis and efficient flop coding styles](#day-2-timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
 - [DAY-3 - Combinational and Sequential Optimizations](#day-3---combinational-and-sequential-optimizations)
-- [DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation match](#day-4---gls,-blocking-vs-non-blocking-and-synthesis-simulation-match)
+- [DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation mismatch](#day-4---gls,-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
 - [Contributors](#contributors)
 - [Acknowledgements](#acknowledgements)
 
@@ -879,7 +879,7 @@ SKY130RTL D3SK4 - Sequential Logic Optimizations for unused outputs
 </details>
 
 
-## DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation match
+## DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation mismatch
 
 <details>
 
@@ -887,22 +887,58 @@ SKY130RTL D3SK4 - Sequential Logic Optimizations for unused outputs
    SKY130RTL D4SK1 - GLS, Synthesis Simulation match and Blocking vs Non Blocking statements
  </summary>
 
-## GLS concepts and flow using verilog
+## SKY130RTL D4SK1 - GLS concepts and flow using verilog
+
+***GLS*** : Gate level simulation. Here, the netlist is run along with the testbench as DUT. Essentially, netlist is same as logical code. This is needed to verify the logical correctness of design after synthesis and to ensure that the timing of the design is met. RTL does not have a notion of time but the design has to meet the specifications and timing limits as well.
+
+
+![WhatsApp Image 2023-08-13 at 23 08 05](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/910b2191-b1e6-444b-a90c-ff234b5134fc)
+
+
+Gate level models can be : 1)Functionally aware 2) Timing aware. The functionality needs to be tested for any kind of mismatch.
+
+
+## SKY130RTL D4SK2 - Synthesis and Simulation Mismatch
+
+As addressed above mismatches exist between simulation and synthesis .
+This mismatch can occur because of the following factors:
+
+***1) Missing Sensitivity list*** : Simulators are change sensitive, only changes in the inputs trigger outputs. Thus, they sense 'activity'.  In the RTL design it is of utmost importance to trigger the assignments appropriately.
+***2) Blocking vs Non blocking***
+***3) Non standard verilog coding***
+
+
+## SKY130RTL D4SK3 - Blocking and Non Blocking assignments.
+
+_Blocking statements_ : It is a sequential execution, one after the other. 
+_Non Blocking_ : Parallel execution
+
+Blocking statemts if not written accurately cause extensive problems in the design and functionality can be lost as well. This problem more specifically arises in sequential circuits.
 
 
 
+## SKY130RTL D4SK4 - Caveats with Blocking Statements.
+
+Consider this code given below:
+
+![WhatsApp Image 2023-08-14 at 00 34 09](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/b7ccb655-75d0-4997-8dd9-f9d2d7a734ba)
 
 
+The old value of q0 is used for simulation and thus the output will be faulty. Instead, the order of statements inside the always block can be interchanged to ensure latest value of q0 to be used for simulation and hence calculation of y. Note that in both designs generate the same circuit.
 
 
+</details>
 
+<details>
 
+<summary>
+   SKY130RTL D4SK2 - G<details>
 
+<summary>
+   SKY130RTL D4SK1 - Labs on  GLS, Synthesis Simulation mismatch
+ </summary>
 
-
-
-
-
+ </summary>
 
 
 
