@@ -548,13 +548,24 @@ Follow similar commands to sythesize all the variations of reset and set.
 ## SKY130RTL D2SK3 - L5- Interesting Optimizations-1
 
 Through multiper circuits, it is obsereved that there is no use of memory in the design and hence is optimized.
+It is obsereved that the multiplication of a number by 2 involves left shifting its contents and appending a zero at the end. Hence by using this simple logic, the use of standard cells and be avoided.
+
+
+<img width="270" alt="Screenshot 2023-08-13 112736" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/443949fa-5fa5-4f8e-a313-dec915e8fdb7">
+
 
 
 
 ## SKY130RTL D2SK3 - L6- Interesting Optimizations-2
 
-Similarly, optimization of multiplication of a 3-bit and a 6-bit number is done, without the use of any standard cells.
+Similarly, optimization of multiplication of a 3-bit number by 9 generates a 6-bit number that involves multiplication of the number by 8 which shifts the bits left by 3 units and then appending 3 right most bits with zeros; then adding the original 3 bit number. This is the design without the use of any standard cells. As demonstrated above, the multiplication does not require any memory.
 
+```
+ $ module mult8 (input [2:0] a , output [5:0] y);
+   	 assign y = a * 9;
+   endmodule
+
+```
 
 
 
