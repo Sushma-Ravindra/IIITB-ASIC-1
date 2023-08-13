@@ -779,9 +779,11 @@ Optimizing and checking the results of all the files in the image below:
 
 Files and their expected optimizations:
 
-dff_const1: There is no sequential constant here, thus flip flop will be a part of the design.
+#### dff_const1 #### : There is no sequential constant here, thus flip flop will be a part of the design.
 
 <img width="960" alt="Screenshot 2023-08-13 133405" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/7997f43d-dcf2-41ee-8560-89eb025d536e">
+
+_STEPS_
 
 ```
  $ read_liberty -lib /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -806,19 +808,19 @@ A flip flop is inferred in the design:
  ## SKY130RTL D3SK3 L2 Sequential Logic Optimizations-2
 
 
-dff_const2: Here, a sequential constant exists, this flip flop is not a part of the design anymore.
+#### dff_const2 ####: Here, a sequential constant exists, this flip flop is not a part of the design anymore.
 
 <img width="309" alt="Screenshot 2023-08-13 134136" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/612a83aa-d9bd-441a-94d0-daec5aa632b3">
 
 
-dff_const3: 2 flipflops are present, but no flip flop can be optimized, hence both exist. 
+#### dff_const3: 2 flipflops are present, but no flip flop can be optimized, hence both exist. 
 
 <img width="306" alt="Screenshot 2023-08-13 142340" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/1d982203-da99-46e9-a38b-89c6e6e72747">
 
 
  ## SKY130RTL D3SK3 L3 Sequential Logic Optimizations-3
 
-dff_const4:  2 flipflops are present, but both flip flops can be optimized, hence both cease to exist. 
+#### dff_const4:  2 flipflops are present, but both flip flops can be optimized, hence both cease to exist. 
 
 
 <img width="303" alt="Screenshot 2023-08-13 135037" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/98224a86-952d-4131-9c6e-a77a32fbc718">
@@ -826,7 +828,7 @@ dff_const4:  2 flipflops are present, but both flip flops can be optimized, henc
 
 
 
-dff_const5: 2 flipflops are present, but no flip flop can be optimized, hence both exist. 
+#### dff_const5: 2 flipflops are present, but no flip flop can be optimized, hence both exist. 
 
 
 
