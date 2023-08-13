@@ -772,7 +772,68 @@ SKY130RTL D3SK3 - Sequential Logic Optimizations
 
  ## SKY130RTL D3SK3 L1 Sequential Logic Optimizations-1
 
+Optimizing and checking the results of all the files in the image below:
 
+<img width="584" alt="Screenshot 2023-08-13 132909" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/2eb67c63-e73e-478a-b6ab-52f98397599e">
+
+Files and their expected optimizations:
+
+dff_const1: There is no sequential constant here, thus flip flop will be a part of the design.
+
+<img width="960" alt="Screenshot 2023-08-13 133405" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/7997f43d-dcf2-41ee-8560-89eb025d536e">
+
+```
+ $ read_liberty -lib /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ $ read_verilog dff_const1.v
+ $ synth -top dff_const1
+ $ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ # it is used to map sequential ckts to their appropriate library, so that tehre is no mismatch
+ $ opt_clean -purge # perfroms optimizations
+ $ abc -liberty /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ $ show
+
+```
+A flip flop is inferred in the design:
+
+<img width="314" alt="Screenshot 2023-08-13 134324" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/390d7576-d180-4d9e-9a77-3f2caed12b93">
+
+
+
+<img width="303" alt="Screenshot 2023-08-13 133908" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/0d41c7ba-def2-4809-b61d-d8965712044e">
+
+
+ ## SKY130RTL D3SK3 L2 Sequential Logic Optimizations-2
+
+
+dff_const2: Here, a sequential constant exists, this flip flop is not a part of the design anymore.
+
+<img width="309" alt="Screenshot 2023-08-13 134136" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/612a83aa-d9bd-441a-94d0-daec5aa632b3">
+
+
+dff_const3: 2 flipflops are present, but no flip flop can be optimized, hence both exist. 
+
+<img width="306" alt="Screenshot 2023-08-13 142340" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/1d982203-da99-46e9-a38b-89c6e6e72747">
+
+
+ ## SKY130RTL D3SK3 L3 Sequential Logic Optimizations-3
+
+dff_const4:  2 flipflops are present, but both flip flops can be optimized, hence both cease to exist. 
+
+
+<img width="303" alt="Screenshot 2023-08-13 135037" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/98224a86-952d-4131-9c6e-a77a32fbc718">
+
+
+
+
+dff_const5: 2 flipflops are present, but no flip flop can be optimized, hence both exist. 
+
+
+
+<img width="302" alt="Screenshot 2023-08-13 135333" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/ca954e14-7810-43af-8c0c-74dad3a1fbd8">
+
+
+
+</details>
 
 
 
