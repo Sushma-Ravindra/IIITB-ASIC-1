@@ -3,6 +3,7 @@
 - [Day-0 - Tools Installation](#day-0---tools-installation)
 - [DAY-1-Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
 - [DAY-2-Timing Libs Hierarchical vs flat synthesis and efficient flop coding styles](#day-2-timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
+- [DAY-3 - Combinational and Sequential Optimizations](#day-3---combinational-and-sequential-optimizations)
 - [Contributors](#contributors)
 - [Acknowledgements](#acknowledgements)
 
@@ -144,7 +145,7 @@ Below is the screenshot of successful installation of ngspice:
 </details>
 <details>
  <summary>
-  OpenLane
+  OpenLane Installation
  </summary>
 
 
@@ -665,10 +666,46 @@ Thus there is a K-Map reductiom happening here.
 
  ## SKY130RTL D3SK1 L2 Introduction to Optimizations-2
 
- 
+ ***Sequential Logic Optimization*** : 2 types :
+ 1. Basic: Sequential Constant Propagation
+ 2. Advanced : a) State Optimization
+               b) Retiming
+               c) Sequential Logic Cloning (Floor Plan Aware Synthesis)
 
 
 
+**Sequential Constant** : Consider the 2 example circuits given below:
+The first example says that no matetr reset in ON or OFF, Q value is always 0 and is constant. 
+In the second example, Q will not be equal to set value always; because after set=0, Q waits until the next clock cycle to check for the value of D. 
+Hence, in the second example Q is not a sequential constant.
+
+![WhatsApp Image 2023-08-13 at 12 29 57](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/fd761ffc-0bb6-4694-98ce-da0c07c18808)
+
+
+ ## SKY130RTL D3SK1 L3 Introduction to Optimizations-3
+
+***State Optimization*** : Optimization of unused states.
+***Sequential Logic Cloning*** : This is done mainly on routing level of abstraction, when the physical design is aware. In the floorplan, to minimize routing delays, 2 copies of a logic block are created so that further circuits can gain easy access and computation is faster. 
+
+![WhatsApp Image 2023-08-13 at 12 47 29](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/232322c2-a26b-4de3-b401-f8ef2d4a33db)
+
+
+***Retiming*** : Retiming is a technique for optimizing sequential circuits. It repositions the registers in a circuit leaving the combinational portion of circuitry untouched. Consider the example circuit below, which ensures higher speed of operation by simply shifting parts of logic from ckt A to B. 
+
+
+![WhatsApp Image 2023-08-13 at 12 47 40](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/90f467da-c4a4-4e0d-b590-42f47cc99e05)
+
+
+</details>
+
+
+
+<details>
+ <summary>
+SKY130RTL D3SK2 - Combinational Logic Optimizations
+ </summary>
+
+ ## SKY130RTL D3SK2 L1 Combinational Logic Optimizations-1
 
 
 
