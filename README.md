@@ -4,6 +4,7 @@
 - [DAY-1-Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
 - [DAY-2-Timing Libs Hierarchical vs flat synthesis and efficient flop coding styles](#day-2-timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
 - [DAY-3 - Combinational and Sequential Optimizations](#day-3---combinational-and-sequential-optimizations)
+- [DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation match](#day-4---gls,-blocking-vs-non-blocking-and-synthesis-simulation-match)
 - [Contributors](#contributors)
 - [Acknowledgements](#acknowledgements)
 
@@ -876,6 +877,36 @@ SKY130RTL D3SK4 - Sequential Logic Optimizations for unused outputs
  ![WhatsApp Image 2023-08-13 at 17 56 49](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/cbd50477-f07e-4382-a1cf-79e674d2ca71)
 
 </details>
+
+
+## DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation match
+
+<details>
+
+<summary>
+   SKY130RTL D4SK1 - GLS, Synthesis Simulation match and Blocking vs Non Blocking statements
+ </summary>
+
+## GLS concepts and flow using verilog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
