@@ -849,6 +849,10 @@ SKY130RTL D3SK4 - Sequential Logic Optimizations for unused outputs
  Looking into the 3 bit upcounter design, counter_opt.v. The output of the counter that is viewed is count[0], which is only 1 bit in the 3 bit counter output, hence the synthesis tool generates only 1 flip flop. 
  
 
+<img width="439" alt="Screenshot 2023-08-13 180051" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/fc7421bd-df9c-4e2b-96d1-d3ea591f6a5b">
+
+ 
+
 <img width="289" alt="Screenshot 2023-08-13 174040" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/87cf84be-c943-4d36-b87b-96b002fe5956">
 
 
@@ -859,6 +863,12 @@ SKY130RTL D3SK4 - Sequential Logic Optimizations for unused outputs
  ## SKY130RTL D3SK4 L1 Sequential Optimizations unused outputs-2
 
  Looking into the 3 bit upcounter design, counter_opt2.v. The output of the counter that is viewed is count[2:0],all 3 bits counter output, hence the synthesis tool generates all 3 flip flop. Also, since there is a lot of combinational logic being generated here, it is worthy to observe that in the previous example, they didnt exist only because the other 2 flipflops were not needed and hence all the combinational logic feeding their inputs were also optimized. 
+
+ 
+ <img width="463" alt="Screenshot 2023-08-13 180129" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/856c54c7-5c19-4b8d-9b81-d6779dee1066">
+
+
+<img width="354" alt="Screenshot 2023-08-13 175246" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/8c41195a-79ae-4b14-b966-661162ee6361">
 
 
  ![WhatsApp Image 2023-08-13 at 17 56 49](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/cbd50477-f07e-4382-a1cf-79e674d2ca71)
@@ -883,5 +893,6 @@ www.chipedge.com/everything-you-need-to-know-about-synthesis-in-vlsi/
 
 www.electronicsforyou.com
 
+www.github/OpenRoad.com
 
 
