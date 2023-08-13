@@ -1,6 +1,6 @@
 # IIITB ASIC COURSE
 # Table of Contents
-- [Day-0 - Tools Installation](#day-0---tools-installation)
+- [DAY-0 - Tools Installation](#day-0---tools-installation)
 - [DAY-1-Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
 - [DAY-2-Timing Libs Hierarchical vs flat synthesis and efficient flop coding styles](#day-2-timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
 - [DAY-3 - Combinational and Sequential Optimizations](#day-3---combinational-and-sequential-optimizations)
@@ -748,6 +748,34 @@ Follow similar process for checking optimization of opt_check2 file to obtain si
 
 
  ## SKY130RTL D3SK2 L1 Combinational Logic Optimizations-2
+
+ Moving ahead with opt_check3 file. , expecting the optimized output to be a 3 input and gate.
+ 
+ <img width="303" alt="Screenshot 2023-08-13 131019" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/852d6025-e6f3-4825-8880-a0e087dcff70">
+
+ Expecting the optimized output to be a 2 input XNOR gate for opt_check4.v file.
+ 
+<img width="307" alt="Screenshot 2023-08-13 131651" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/ab04b05b-c182-4bdd-9606-f78ac7f5197e">
+
+For the file multiple_module_opt.v, the optimized expression is y=ab+c, which requires a gate which ands 2 inputs and performs an or operation of it with another variable doe by gate "a21o".
+Here, the synthesis result is also flattened else only the top submodule is synthesized.
+
+<img width="305" alt="Screenshot 2023-08-13 132409" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/d35bb10a-ce4d-41d1-b036-3a6b0407c1a8">
+
+</details>
+
+
+<details>
+ <summary>
+SKY130RTL D3SK3 - Sequential Logic Optimizations
+ </summary>
+
+ ## SKY130RTL D3SK3 L1 Sequential Logic Optimizations-1
+
+
+
+
+
 
 
 
