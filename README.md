@@ -566,7 +566,54 @@ Similarly, optimization of multiplication of a 3-bit number by 9 generates a 6-b
    endmodule
 
 ```
+</details>
 
+## DAY-3 - Combinational and Sequential Optimizations
+
+<details>
+ <summary>
+SKY130RTL D3SK1 - Introduction to Optimizations
+ </summary>
+
+ ## SKY130RTL D3SK1 L1 Introduction to Optimizations-1
+
+ ***Optimizations*** : The action of making the best or most effective use of a situation or resource. Here, it is essentially minimizing the logic so as to get the best savings in terms of area and power. 
+It can be of the following types:
+
+1. Constant Propagation
+2. Boolean Logic Optimization
+
+
+**Constant Propagation** :  In the example, if A=0, the whole logic will only be transformed into an inverter. The implementation will now have 2 transistors instead of 6 transistors.
+
+**Boolean Logic Optimization** : Consider the boolean expression:
+```
+ $ assign y = a?(b?c:(c?a:0)):(!c)
+
+```
+This design generates 3 muxes internally. To optimize it, simplify the boolean expression generated from the 3 muxes as shown
+
+```
+ ~a~c + a(bc + ~bac)
+ ~a~c + ac
+ !(a^c)
+
+```
+
+Thus there is a K-Map reductiom happening here.
+
+
+ ## SKY130RTL D3SK1 L2 Introduction to Optimizations-2
+
+ 
+
+
+
+
+
+
+
+ 
 
 
 
