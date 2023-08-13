@@ -661,7 +661,7 @@ This design generates 3 muxes internally. To optimize it, simplify the boolean e
 
 ```
 
-Thus there is a K-Map reductiom happening here.
+Thus there is a K-Map reduction happening here.
 
 
  ## SKY130RTL D3SK1 L2 Introduction to Optimizations-2
@@ -707,10 +707,47 @@ SKY130RTL D3SK2 - Combinational Logic Optimizations
 
  ## SKY130RTL D3SK2 L1 Combinational Logic Optimizations-1
 
+_STEPS_
+
+Check the following files and their expected optimizations are listed below:
+opt_check : And gate instead of a 2x1 mux.
+opt_check2 : Or gate instead of a 2x1 mux. (Through de-morgan's law) 
+
+Synthesize these files and check for schematics:
+
+```
+ $ cd /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files/
+ $ yosys
+ $ read_liberty -lib /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ $ read_verilog opt_check.v
+ $ synth -top opt_check
+ $ opt_clean -purge # perfroms optimizations
+ $ abc -liberty /home/sush/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ $ show
+
+```
+Check the following files and their expected optimizations are listed below:
+opt_check : And gate instead of a 2x1 mux.
+opt_check2 : Or gate instead of a 2x1 mux. (Through de-morgan's law) 
 
 
+Results of synthesis: 
+Optimizations have been done as required. 
+
+<img width="305" alt="Screenshot 2023-08-13 125957" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/6f482e25-80c9-454d-806d-e1f9dda42546">
 
  
+<img width="305" alt="Screenshot 2023-08-13 130035" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/7fa8f710-e1ea-4baf-aa7d-f35ed4bd6b12">
+
+
+Follow similar process for checking optimization of opt_check2 file to obtain similar results. 
+
+
+
+
+
+
+ ## SKY130RTL D3SK2 L1 Combinational Logic Optimizations-2
 
 
 
