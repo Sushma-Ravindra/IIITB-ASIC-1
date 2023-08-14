@@ -1111,8 +1111,35 @@ Synthesis results:
 
 ## SKY130RTL D5SK2 L1 Incomplete if - 2
 
+Consider the verilog code, incomp_if2. Its RTL design is expected to generate the following circuit:
+
+![WhatsApp Image 2023-08-14 at 22 01 14](https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/44847dbe-21ca-4df8-b5c3-3130c321dcc1)
 
 
+<img width="960" alt="Screenshot 2023-08-14 220542" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/bec2c143-c3c1-421e-97e0-dfd22db1d513">
+
+
+
+Synthesis Result:
+
+
+<img width="307" alt="Screenshot 2023-08-14 220629" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/56f39f18-ca4c-4bce-88e5-239f693cc484">
+
+
+<img width="301" alt="Screenshot 2023-08-14 220645" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/5cab9b28-6456-4376-99c2-30923dfa0c51">
+
+
+</details>
+
+<details>
+
+<summary>
+   SKY130RTL D5SK3 - Labs on Incomplete Overlapping case
+ </summary>
+
+##   SKY130RTL D5SK3 - Lab Incomplete Overlapping case - 1 
+
+Consider the example verilog file 
   
 
 ## Contributors
