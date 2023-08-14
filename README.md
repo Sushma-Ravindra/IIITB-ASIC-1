@@ -1095,8 +1095,21 @@ Here 2 MUXes(one for each output: x and y), each 4x1(select line is 2 bit, meani
 
 ## SKY130RTL D5SK2 L1 Incomplete if - 1
 
+First checking the incomplete if statement that is generating a latch. 
+Simulate the RTL design and check results on GTK wave.
 
 
+<img width="506" alt="Screenshot 2023-08-14 215400" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/ed7f3965-3c81-4d20-aa6e-0c7fe291f88c">
+
+
+Synthesis results: 
+
+<img width="314" alt="Screenshot 2023-08-14 215518" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/8442376c-48d7-470c-99fe-46047f206712">
+
+<img width="303" alt="Screenshot 2023-08-14 215544" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/d7f5e1d3-ac78-4be9-8816-2ce6bd3999e8">
+
+
+## SKY130RTL D5SK2 L1 Incomplete if - 2
 
 
 
