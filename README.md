@@ -1139,8 +1139,29 @@ Synthesis Result:
 
 ##   SKY130RTL D5SK3 - Lab Incomplete Overlapping case - 1 
 
-Consider the example verilog file 
-  
+Consider the example verilog file comp_case. 
+
+<img width="673" alt="Screenshot 2023-08-14 221640" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/6e3a32f5-1d89-4999-826c-822015ccca84">
+
+
+RTL simulation is incomplete: for sel = 2'b11, it displays value of the default statement, i.e output follows i2.
+
+<img width="506" alt="Screenshot 2023-08-14 221339" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/73011d8e-e525-4173-80fa-38fdd1d540a5">
+
+Synthesis results:
+
+  <img width="333" alt="Screenshot 2023-08-14 221921" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/fdcad66d-5448-4ca9-87d5-e033a33ce086">
+
+<img width="303" alt="Screenshot 2023-08-14 221937" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/c3b6095c-4975-4925-bf63-4b672c96f6e7">
+
+
+##   SKY130RTL D5SK3 - Lab Incomplete Overlapping case - 2
+
+
+
+
+
+
 
 ## Contributors
 SUSHMA R
