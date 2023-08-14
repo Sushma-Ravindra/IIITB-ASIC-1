@@ -1196,19 +1196,47 @@ Simulation result: GLS Synthesis shows that unpredictabilty exits in the netlist
    SKY130RTL D5SK4 - For Loop and Generate
  </summary>
 
-##   SKY130RTL D5SK4 - For Loop and Generate - 11
+##   SKY130RTL D5SK4 - For Loop and Generate - 1
+
+***Looping Constructs*** 
+1) For Loop: Used inside an always block. To evaluate an expression 'n' number of times.
+2) Generate : It is a generate loop followed by a for loop.Outside an always loop. Used to instantiate hardware 'n' number of times.
+
+##   SKY130RTL D5SK4 - For Loop and Generate - 2
 
 
+Different examples of writing good verilog designs are written using blocking statements, where for construct comes very handy to reduce a number of lines of coding.
+
+For-generate on the other hand is used for (instantiating) replicating hardware.
+
+```
+genvar i;
+generate
+for (i=0 ; i<8; i = i+1) begin
+  #instantiate a function of choice
+end
+endgenerate
+
+```
+
+Thus there will be 8 instances of the function called. 
 
 
+##   SKY130RTL D5SK4 - For Loop and Generate - 2
+
+In the design of a ripple carry adder, if it is required to have an N-bit adder, there is a need to replicate the hardware of a FA N times. 
+Simliar to for-generate, if-generate also exists.
+
+</details>
+
+<details>
+ 
+<summary>
+ SKY130RTL D5SK5 - Labs on For Loop and For Generate
+</summary>
 
 
-
-
-
-
-
-
+##  SKY130RTL D5SK5 - Labs on For Loop and For Generate - 1
 
 
 
