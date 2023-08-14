@@ -4,8 +4,8 @@
 - [DAY-1-Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
 - [DAY-2-Timing Libs Hierarchical vs flat synthesis and efficient flop coding styles](#day-2-timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
 - [DAY-3 - Combinational and Sequential Optimizations](#day-3---combinational-and-sequential-optimizations)
-- [DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation mismatch](#day-4---gls,-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
-- [DAY-5 - If,case,for loop and generate](#day-5--if,case,for-loop-and-generate)
+- [DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation mismatch](#day-4---gls-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
+- [DAY-5 - If,case,for loop and generate](#day-5--if-case-for-loop-and-generate)
 - [Contributors](#contributors)
 - [Acknowledgements](#acknowledgements)
 
@@ -880,7 +880,7 @@ SKY130RTL D3SK4 - Sequential Logic Optimizations for unused outputs
 </details>
 
 
-## DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation mismatch
+## DAY-4 - GLS Blocking vs Non Blocking and Synthesis Simulation mismatch
 
 <details>
 
@@ -1024,7 +1024,8 @@ Thus synth-sim mismatch exist and must be taken extra care of.
 
 
 
-## DAY-5 -If,case,for loop and generate
+## DAY-5 -If case for loop and generate
+
 <details>
 
 <summary>
@@ -1222,12 +1223,13 @@ endgenerate
 Thus there will be 8 instances of the function called. 
 
 
-##   SKY130RTL D5SK4 - For Loop and Generate - 2
+##   SKY130RTL D5SK4 - For Loop and Generate - 3
 
 In the design of a ripple carry adder, if it is required to have an N-bit adder, there is a need to replicate the hardware of a FA N times. 
 Simliar to for-generate, if-generate also exists.
 
 </details>
+
 
 <details>
  
