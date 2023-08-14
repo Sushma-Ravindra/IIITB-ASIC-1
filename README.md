@@ -1157,6 +1157,56 @@ Synthesis results:
 
 ##   SKY130RTL D5SK3 - Lab Incomplete Overlapping case - 2
 
+The verilog design partial_case_assign ha a prtial assignement as discussed above.There should be a latch in the path of X as it has an incomplete assignment.
+
+
+<img width="800" alt="Screenshot 2023-08-14 222700" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/d4ddd5b9-b8a4-4617-8f44-c57ee2716cd1">
+
+
+##   SKY130RTL D5SK3 - Lab Incomplete Overlapping case - 3
+
+Simulation Results:
+
+<img width="301" alt="Screenshot 2023-08-14 223127" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/31aec2fb-664d-47f4-b691-df423cab48c1">
+
+<img width="304" alt="Screenshot 2023-08-14 223149" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/6835bd5e-97fb-498f-bcae-73ba76fa9e9a">
+
+Consider the verilog code bad_case:
+Here, i3 is at output even if case condition is 10 because of bad style of design. The simulator will be confused and the output cannot be predicted, it is at the mercy of the simulator.
+
+<img width="688" alt="Screenshot 2023-08-14 223457" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/974b07f9-576b-4350-b08d-b7d6a2484374">
+
+
+##   SKY130RTL D5SK3 - Lab Incomplete Overlapping case - 4
+
+
+Simulation result: GLS Synthesis shows that unpredictabilty exits in the netlist design. There is no latch generated for this circuit as expected.
+
+<img width="333" alt="Screenshot 2023-08-14 223800" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/34711d34-4ba3-4e00-807b-51673aaeb0ca">
+
+
+<img width="960" alt="Screenshot 2023-08-14 224238" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/87c715b8-4633-48f2-b21e-013a3b27c558">
+
+
+</details>
+
+<details>
+
+<summary>
+   SKY130RTL D5SK4 - For Loop and Generate
+ </summary>
+
+##   SKY130RTL D5SK4 - For Loop and Generate - 11
+
+
+
+
+
+
+
+
+
+
 
 
 
