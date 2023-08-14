@@ -1031,12 +1031,76 @@ Thus synth-sim mismatch exist and must be taken extra care of.
    SKY130RTL D5SK1 - If case constructs
  </summary>
 
-## SKY130RTL D5SK1 L1 If case constructs - 1
+## SKY130RTL D5SK1 L1 If Case constructs - 1
+
+***IF*** If statements are used to construct priority logic. There can be if else or if and a series of else if statements. The hardware of this if statement is a MUX.
+
+Both if and case staements are present inside an always block on a reg type variable.
+
+_Infered Latch_ : This ia a downside of writing improper or poor if statements. If an if statement doesnt have an else, it stores the previous value of output because if condition is also false and there is no more option to check, hence a latch is generated in the hardware. The intention was not to create a latch, the circuit is now converted to a sequential kind.
+
+
+## SKY130RTL D5SK1 L2 If Case constructs - 2
+
+In a counter, an always block is always a part of the design, so there exists a latch generation in the hardware, irrespective of whether an incomplete if statement is present.
+
+***Case Statement*** : Used when multiple variations of an expression need to be checked. So if 4 case staements are present, it means a 4x1 MUX is generated on the hardware front.
+
+Caveats:
+1) Incomplete case statements: Suppose all the variations of case statements are not taken care of and no default statement exists again _Latch up_ occurs. Thus default statement is very important and essential.
+
+
+## SKY130RTL D5SK1 L3 If Case constructs - 3
+
+_Caveats Contd_:
+
+2) Partial assignments in case: Consider the following RTL design
+
+```
+ module mux(x,y,sel,a,b,c,d);
+ input a,b,c,d;
+ input reg [1:0] sel;
+ output reg x, y;
+ always @ (*)
+ begin
+      case(sel)
+           2'b00 : begin
+                   x=a;
+                   y=b;
+             end
+           2'b01 : begin
+                   x=a;
+             end
+           default: begin
+                    x=a;
+                    y=b;
+              end
+ endcase
+ endmodule
+
+```
+
+Here 2 MUXes(one for each output: x and y), each 4x1(select line is 2 bit, meaning 4 cases) are genrated. But when sel is 01, the output y is not assigned any value causing the generation of a hardware latch. Thus all outputs must be assigned values in all segments of case. 
+
+3) Overlap in Case: In if else statements only 1 statement will be executed and the remaining will not be checked when 1 of them becomes true in the sequential order. If a bad case statement is written all conditions are checked even if some statement has already matched, so if there are overlaps, unpredictable outputs arise. 
+
+
+</details>
+
+<details>
+
+<summary>
+   SKY130RTL D5SK2 - Labs on Incomplete if case
+ </summary>
+
+## SKY130RTL D5SK2 L1 Incomplete if - 1
 
 
 
 
 
+
+  
 
 ## Contributors
 SUSHMA R
