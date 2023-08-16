@@ -1,15 +1,25 @@
 # IIITB ASIC COURSE
 # Table of Contents
-- [DAY-0 - Tools Installation](#day-0---tools-installation)
-- [DAY-1-Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
-- [DAY-2-Timing Libs Hierarchical vs flat synthesis and efficient flop coding styles](#day-2-timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
-- [DAY-3 - Combinational and Sequential Optimizations](#day-3---combinational-and-sequential-optimizations)
-- [DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation mismatch](#day-4---gls-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
-- [DAY-5 - If,case,for loop and generate](#day-5--if-case-for-loop-and-generate)
+- [Week - 1](#week---1)
+   * [DAY-0 - Tools Installation](#day-0---tools-installation)
+     
+   * [DAY-1-Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
+   
+   * [DAY-2-Timing Libs Hierarchical vs flat synthesis and efficient flop coding styles](#day-2-timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
+   
+   * [DAY-3 - Combinational and Sequential Optimizations](#day-3---combinational-and-sequential-optimizations)
+   
+   * [DAY-4 - GLS, Blocking vs Non Blocking and Synthesis Simulation mismatch](#day-4---gls-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
+   
+   * [DAY-5 - If,case,for loop and generate](#day-5--if-case-for-loop-and-generate)
+
+- [Week - 2](#week---2)
+   
 - [Contributors](#contributors)
 - [Acknowledgements](#acknowledgements)
 
 
+## Week - 1 
 ## DAY-0 - Tools Installation
 
 <details>
@@ -1295,6 +1305,106 @@ Checking the RTL Simulation and the GLS Synthsis simulation and verifying that t
 <img width="960" alt="Screenshot 2023-08-15 000255" src="https://github.com/Sushma-Ravindra/IIITB-ASIC-1/assets/141133883/0177fa62-15d3-4feb-b989-6eec5b7e4042">
 
 The addition is still being performed with accuracy.
+
+
+
+
+## Week - 2 
+
+
+<details>
+ <summary>
+  RV-D1SKI Introduction to RISC V : Basic Keywords
+ </summary>
+
+## RV-D1SKI L1 Introduction 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
